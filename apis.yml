@@ -1,23 +1,64 @@
 aid: arkenstone
+
 name: Arkenstone
-description: 'Arkenstone is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Arkenstone Technologies provides strategic consulting and implementation services focused on healthcare innovation, artificial intelligence, robotic process automation, compliance, security, and immersive technologies. Their offerings include healthcare analytics, AI-driven solutions, RPA deployment, and guidance on regulatory compliance, helping organizations navigate digital transformation and market disruptions.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arkenstone/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
 - Company
-apis: []
+- Healthcare
+- AI
+- RPA
+- Compliance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arkenstone-hosts.yml
+- type: Newsroom
+  url: https://arkenstonetechnologies.com/news/
+- type: Blog
+  url: https://arkenstonetechnologies.com/blog/
+- type: DomainSecurity
+  url: security/arkenstone-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://arkenstonetechnologies.com/
+
+apis: []
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: No OpenAPI, AsyncAPI, GraphQL, or other machine‑readable contract was found on the provider's hosts.
+  evidence:
+    - url: https://arkenstonetechnologies.com/openapi.json
+      status: 404
+    - url: https://api.arkenstonetechnologies.com/openapi.json
+      status: 000
+  checked: 2026-09-26
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
